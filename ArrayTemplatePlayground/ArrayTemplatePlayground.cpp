@@ -5,6 +5,7 @@
 using namespace std;
 
 void displayVectorElements(vector<int> intVec);
+void sumVectorElements(vector<int> intVec);
 
 template<typename T>
 void getMax(T val1, T val2) {
@@ -21,6 +22,14 @@ void displayVectorElements(vector<int> intVec) {
 	}
 }
 
+void sumVectorElements(vector<int> intVec) {
+	int sum = 0; // could be a double, but int will work for now
+	for (unsigned i = 0; i < intVec.size(); i++) {
+		sum += intVec.at(i);
+	}
+	cout << "The sum of the vector elements is " << sum << endl;
+}
+
 int main()
 {
 	/*int val1 = 10, val2 = 7;
@@ -35,6 +44,7 @@ int main()
 	intVec.push_back(5);
 
 	displayVectorElements(intVec);
+	sumVectorElements(intVec);
 
 	return 0;
 }
